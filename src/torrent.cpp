@@ -1075,7 +1075,9 @@ namespace libtorrent
 		if (!j->error) return;
 
 #ifndef TORRENT_DISABLE_LOGGING
-		debug_log("disk error: (%d) %s in file: %s", j->error.ec.value(), j->error.ec.message().c_str()
+		debug_log("disk error: (%d) %s [%s : %s] in file: %s"
+			, j->error.ec.value(), j->error.ec.message().c_str()
+			, job_name(j->action), j->error.operation_str()
 			, resolve_filename(j->error.file).c_str());
 #endif
 
