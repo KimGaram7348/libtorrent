@@ -53,7 +53,7 @@ void check_chain(tailqueue<test_node>& chain, char const* expected)
 	}
 	if (!chain.empty())
 	{
-		TEST_CHECK(chain.last() == NULL || chain.last()->next == NULL);
+		TEST_CHECK(chain.last() == nullptr || chain.last()->next == nullptr);
 	}
 	TEST_EQUAL(expected[0], 0);
 }
