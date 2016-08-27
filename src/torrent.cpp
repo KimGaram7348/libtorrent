@@ -46,6 +46,7 @@ POSSIBILITY OF SUCH DAMAGE.
 
 #include "libtorrent/aux_/disable_warnings_push.hpp"
 
+#include <boost/utility.hpp> // for boost::next
 #include <boost/make_shared.hpp>
 #if TORRENT_USE_I2P
 #  include <boost/algorithm/string/predicate.hpp>
